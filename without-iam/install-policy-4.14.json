@@ -141,7 +141,8 @@
             "iam:PutRolePolicy",
             "iam:RemoveRoleFromInstanceProfile",
             "iam:SimulatePrincipalPolicy",
-            "iam:TagRole"
+            "iam:TagRole",
+            "iam:CreateServiceLinkedRole"
         ]
       },
       {
@@ -248,7 +249,9 @@
             "s3:PutLifecycleConfiguration",
             "s3:ListBucket",
             "s3:ListBucketMultipartUploads",
-            "s3:AbortMultipartUpload"
+            "s3:AbortMultipartUpload",
+            "iam:CreateAccessKey",
+            "iam:CreateUser"
         ]
       },
       {
