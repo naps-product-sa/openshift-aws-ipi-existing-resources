@@ -196,7 +196,7 @@
         ]
       },
       {
-        "Sid": "requireddeletebase",
+        "Sid": "requireddelete",
         "Effect": "Allow",
         "Resource": "*",
         "Action": [
@@ -214,14 +214,7 @@
             "iam:ListUserPolicies",
             "s3:DeleteObject",
             "s3:ListBucketVersions",
-            "tag:GetResources"
-        ]
-      },
-      {
-        "Sid": "requireddeletenetwork",
-        "Effect": "Allow",
-        "Resource": "*",
-        "Action": [
+            "tag:GetResources",
             "ec2:DeleteDhcpOptions",
             "ec2:DeleteInternetGateway",
             "ec2:DeleteNatGateway",
@@ -233,14 +226,7 @@
             "ec2:DetachInternetGateway",
             "ec2:DisassociateRouteTable",
             "ec2:ReleaseAddress",
-            "ec2:ReplaceRouteTableAssociation"
-        ]
-      },
-      {
-        "Sid": "requireddeleteshared",
-        "Effect": "Allow",
-        "Resource": "*",
-        "Action": [
+            "ec2:ReplaceRouteTableAssociation",
             "iam:UntagRole"
         ]
       },
@@ -265,19 +251,12 @@
         ]
       },
       {
-        "Sid": "requiredquotacheck",
+        "Sid": "optional",
         "Effect": "Allow",
         "Resource": "*",
         "Action": [
             "ec2:DescribeInstanceTypeOfferings",
-            "servicequotas:ListAWSDefaultServiceQuotas"
-        ]
-      },
-      {
-        "Sid": "requiredsharedvpc",
-        "Effect": "Allow",
-        "Resource": "*",
-        "Action": [
+            "servicequotas:ListAWSDefaultServiceQuotas",
             "sts:AssumeRole"
         ]
       }
