@@ -94,14 +94,8 @@
             "elasticloadbalancing:DescribeTags",
             "elasticloadbalancing:ModifyLoadBalancerAttributes",
             "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
-            "elasticloadbalancing:SetLoadBalancerPoliciesOfListener"
-        ]
-      },
-      {
-        "Sid": "requiredelbv2",
-        "Effect": "Allow",
-        "Resource": "*",
-        "Action": [
+            "elasticloadbalancing:SetLoadBalancerPoliciesOfListener",
+
             "elasticloadbalancing:AddTags",
             "elasticloadbalancing:CreateListener",
             "elasticloadbalancing:CreateLoadBalancer",
@@ -142,7 +136,17 @@
             "iam:RemoveRoleFromInstanceProfile",
             "iam:SimulatePrincipalPolicy",
             "iam:TagRole",
-            "iam:CreateServiceLinkedRole"
+            "iam:CreateServiceLinkedRole",
+
+            "iam:DeleteAccessKey",
+            "iam:DeleteUser",
+            "iam:DeleteUserPolicy",
+            "iam:GetUserPolicy",
+            "iam:ListAccessKeys",
+            "iam:PutUserPolicy",
+            "iam:TagUser",
+            "iam:CreateAccessKey",
+            "iam:CreateUser"
         ]
       },
       {
@@ -168,24 +172,28 @@
         "Effect": "Allow",
         "Resource": "*",
         "Action": [
-            "route53:ChangeResourceRecordSets",
-            "route53:ChangeTagsForResource",
-            "route53:CreateHostedZone",
-            "route53:DeleteHostedZone",
-            "route53:GetChange",
-            "route53:GetHostedZone",
-            "route53:ListHostedZones",
-            "route53:ListHostedZonesByName",
-            "route53:ListResourceRecordSets",
-            "route53:ListTagsForResource",
-            "route53:UpdateHostedZoneComment"
-        ]
-      },
-      {
-        "Sid": "requireds3operators",
-        "Effect": "Allow",
-        "Resource": "*",
-        "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:GetAccelerateConfiguration",
+            "s3:GetBucketAcl",
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:GetBucketLogging",
+            "s3:GetBucketPolicy",
+            "s3:GetBucketObjectLockConfiguration",
+            "s3:GetBucketReplication",
+            "s3:GetBucketRequestPayment",
+            "s3:GetBucketTagging",
+            "s3:GetBucketVersioning",
+            "s3:GetBucketWebsite",
+            "s3:GetEncryptionConfiguration",
+            "s3:GetLifecycleConfiguration",
+            "s3:GetReplicationConfiguration",
+            "s3:ListBucket",
+            "s3:PutBucketAcl",
+            "s3:PutBucketTagging",
+            "s3:PutEncryptionConfiguration",
+
             "s3:DeleteObject",
             "s3:GetObject",
             "s3:GetObjectAcl",
@@ -193,7 +201,14 @@
             "s3:GetObjectVersion",
             "s3:PutObject",
             "s3:PutObjectAcl",
-            "s3:PutObjectTagging"
+            "s3:PutObjectTagging",
+
+            "s3:PutBucketPublicAccessBlock",
+            "s3:GetBucketPublicAccessBlock",
+            "s3:PutLifecycleConfiguration",
+            "s3:ListBucket",
+            "s3:ListBucketMultipartUploads",
+            "s3:AbortMultipartUpload"
         ]
       },
       {
@@ -230,28 +245,6 @@
             "ec2:ReplaceRouteTableAssociation",
             "iam:UntagRole",
             "tag:UntagResources"
-        ]
-      },
-      {
-        "Sid": "requiredadditionaliams3",
-        "Effect": "Allow",
-        "Resource": "*",
-        "Action": [
-            "iam:DeleteAccessKey",
-            "iam:DeleteUser",
-            "iam:DeleteUserPolicy",
-            "iam:GetUserPolicy",
-            "iam:ListAccessKeys",
-            "iam:PutUserPolicy",
-            "iam:TagUser",
-            "s3:PutBucketPublicAccessBlock",
-            "s3:GetBucketPublicAccessBlock",
-            "s3:PutLifecycleConfiguration",
-            "s3:ListBucket",
-            "s3:ListBucketMultipartUploads",
-            "s3:AbortMultipartUpload",
-            "iam:CreateAccessKey",
-            "iam:CreateUser"
         ]
       },
       {
