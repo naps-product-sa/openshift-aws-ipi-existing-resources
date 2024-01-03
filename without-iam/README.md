@@ -1,3 +1,9 @@
+## install policy documents
+
+Manually created from https://docs.openshift.com/container-platform/4.14/installing/installing_aws/installing-aws-user-infra.html#installation-aws-permissions_installing-aws-user-infra
+
+## policy documents
+
 (python script requires PyYAML library, install with `pip install yaml` or use a python virtual environment)
 
 The python script will take a list of yaml CredentialRequest objects and create a AWS policy document from them. Extract the CredentialRequest objects from the release image:
@@ -38,3 +44,4 @@ $ oc adm release extract \
 ```
 python create_policy.py credentialrequests
 ```
+
