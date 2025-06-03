@@ -33,3 +33,17 @@ Generate a single AWS policy for all CredentialRequests
 ```
 python create_policy.py credentialrequests/*
 ```
+
+## Install config differences?
+
+Unsure if there are differences if you specify a install-config
+
+```
+oc adm release extract \
+  --from=$RELEASE_IMAGE \
+  --credentials-requests \
+  --included \
+  --install-config=<path_to_directory_with_installation_configuration>/install-config.yaml \
+  --included
+  --to=credentialrequests
+```
