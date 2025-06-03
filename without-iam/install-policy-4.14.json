@@ -96,18 +96,12 @@
           "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
           "elasticloadbalancing:SetLoadBalancerPoliciesOfListener",
 
-          "elasticloadbalancing:AddTags",
           "elasticloadbalancing:CreateListener",
-          "elasticloadbalancing:CreateLoadBalancer",
           "elasticloadbalancing:CreateTargetGroup",
-          "elasticloadbalancing:DeleteLoadBalancer",
           "elasticloadbalancing:DeregisterTargets",
           "elasticloadbalancing:DescribeListeners",
-          "elasticloadbalancing:DescribeLoadBalancerAttributes",
-          "elasticloadbalancing:DescribeLoadBalancers",
           "elasticloadbalancing:DescribeTargetGroupAttributes",
           "elasticloadbalancing:DescribeTargetHealth",
-          "elasticloadbalancing:ModifyLoadBalancerAttributes",
           "elasticloadbalancing:ModifyTargetGroup",
           "elasticloadbalancing:ModifyTargetGroupAttributes",
           "elasticloadbalancing:RegisterTargets"
@@ -205,7 +199,6 @@
           "s3:PutBucketPublicAccessBlock",
           "s3:GetBucketPublicAccessBlock",
           "s3:PutLifecycleConfiguration",
-          "s3:ListBucket",
           "s3:ListBucketMultipartUploads",
           "s3:AbortMultipartUpload"
       ]
