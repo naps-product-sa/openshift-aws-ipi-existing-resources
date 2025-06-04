@@ -10,23 +10,9 @@ I changed `s3:HeadBucket` to `s3:ListBucket`
 
 The python script will take a list of yaml CredentialRequest objects and create a AWS policy document from them. Extract the CredentialRequest objects from the release image:
 
-https://docs.openshift.com/container-platform/4.14/installing/installing_aws/installing-aws-customizations.html#manually-create-iam_installing-aws-customizations
+https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/installing_on_aws/installer-provisioned-infrastructure#installing-aws-manual-modes_installing-aws-customizations
 
-Get the release image
-
-```
-openshift-install version
-```
-
-Use the release image and extract the CredentialRequests
-
-```
-oc adm release extract quay.io/openshift-release-dev/ocp-release:4.16.0-x86_64
-  --credentials-requests
-  --cloud=aws
-  --included
-  --to=credentialrequests
-```
+(use the procedure above for generating the credentialrequests directory
 
 Generate a single AWS policy for all CredentialRequests
 
@@ -34,16 +20,3 @@ Generate a single AWS policy for all CredentialRequests
 python create_policy.py credentialrequests/*
 ```
 
-## Install config differences?
-
-Unsure if there are differences if you specify a install-config
-
-```
-oc adm release extract \
-  --from=$RELEASE_IMAGE \
-  --credentials-requests \
-  --included \
-  --install-config=<path_to_directory_with_installation_configuration>/install-config.yaml \
-  --included
-  --to=credentialrequests
-```
